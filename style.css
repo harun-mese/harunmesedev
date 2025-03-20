@@ -1,0 +1,135 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --bg-color: rgb(255, 255, 255);
+    --header-padding: 0px 10px;
+    --header-height: 60px;
+    --nav-mobil-w:250px;
+    --nav-mobil-h:250px;
+
+
+    --site-container-max-w:1200px;
+
+
+
+    --footer-bg-color: rgb(255, 255, 255);
+}
+
+.site_header_type1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--header-padding);
+    height:  var(--header-height);
+    width: 100%;
+    background-color: var(--bg-color);
+    position: relative;
+    color: black;
+}
+.site_nav_type1{
+ position: absolute;
+ top: var(--header-height);
+ right: 0px;
+ width: var(--nav-mobil-w);
+ height: var(--nav-mobil-h);
+ background-color: aliceblue;
+ padding: 10px;
+ color: black;
+ display: none;
+ align-items: flex-start;
+ justify-content: flex-start;
+ flex-direction: column;
+}
+.site_nav_item_type1{
+    color: inherit;
+    margin: 10px;
+    text-decoration: none;
+}
+.nav_btn_type1{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+
+
+
+
+.site_container{
+    min-height: 100vh;
+    width: 100%;
+    max-width: var(--site-container-max-w);
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.site_container aside{
+    min-height: 100vh;
+    width: 100%;
+    max-width: var(--site-container-max-w);
+    margin: 0px auto;
+    background-color: rgb(216, 216, 216);
+    padding: 10px;
+}
+.site_container main{
+    min-height: 100vh;
+    width: 100%;
+    max-width: var(--site-container-max-w);
+    margin: 10px auto;
+    background-color: rgb(245, 245, 245);
+}
+
+
+.site_footer_type1{
+    background-color: var(--footer-bg-color);
+    min-height: 40vh;
+    width: 100%;
+    margin: 0px auto;
+    margin-top: 10px;
+}
+
+
+
+@media screen and (min-width:768px) {
+    .site_nav_type1{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% ,-50%);
+        width: fit-content;
+        height: auto;
+        background-color: transparent;
+        padding: 0px;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .nav_btn_type1{
+        display: none;
+    }  
+
+
+    .site_container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .site_container aside{
+        width: 300px;
+        border-radius: 10px;
+    }
+    .site_container main{
+        border-radius: 10px;
+        margin: auto 10px;
+    }
+}
